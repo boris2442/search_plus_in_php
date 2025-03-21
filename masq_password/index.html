@@ -19,15 +19,35 @@
 
         </div>
         <div class="">
-            <input type="password" name="password" id="" placeholder="password">
-            <i class="fa fa-eye " id="togglePassword" ></i>
+            <input type="password" name="password" id="password" placeholder="password">
+            <i class="fa fa-eye " id="togglePassword"></i>
         </div>
 
         <button type="submit">Submit</button>
 
 
     </form>
-    <script src="script.js"></script>
+    <script>
+        const password = document.querySelector('#password');
+        const togglePassword = document.querySelector('#togglePassword');
+
+        const change = () => {
+            let e = true;
+            if (e) {
+                password.setAttribute('type', 'text');
+                e = false;
+
+            } else {
+                password.setAttribute('type', 'password');
+                e = true;
+            }
+
+        }
+        password.addEventListener('click', change);
+
+
+
+    </script>
 </body>
 
 </html>
