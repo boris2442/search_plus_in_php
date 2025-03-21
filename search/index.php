@@ -4,8 +4,8 @@ $valider = $_GET['valider'] ?? '';
 if (isset($valider) && !empty(trim($search))) {
     include "connexion.php";
     $words = explode(" ", trim($search));
-    $conditions = [];//stocker le conditions sql
-    $params = [];//Pour stocker les valeurs à utiliser dans les conditions
+    $conditions = []; //stocker le conditions sql
+    $params = []; //Pour stocker les valeurs à utiliser dans les conditions
     foreach ($words as $word) {
         $conditions[] = "desg LIKE ?";
         $params[] = '%' . $word . '%';
