@@ -9,7 +9,7 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
 require_once "connexion.php";
 
 // Déterminer le nombre total d'articles
-$sql = "SELECT COUNT(*) as nb_articles FROM `articles`";
+$sql = "SELECT COUNT(*) AS  nb_articles FROM `articles`";
 $query = $db->prepare($sql);
 $query->execute();
 $totalArticles = $query->fetch()['nb_articles'];
